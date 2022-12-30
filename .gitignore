@@ -1,0 +1,27 @@
+# node
+node_modules/
+
+# yarn
+.yarn/cache
+.yarn/install-state.gz
+
+# build
+dist/
+
+# test
+coverage/*
+
+# mac
+.DS_Store
+
+# git
+!.gitkeep
+
+# intellij
+.idea/**.iml
+.idea/compiler.xml
+.idea/dictionaries
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml

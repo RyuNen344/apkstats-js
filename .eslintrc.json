@@ -1,0 +1,26 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es2022": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "newline-before-return": "error",
+    "no-var": "error"
+  }
+}

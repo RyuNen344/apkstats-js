@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*",
+        "test/*"
+      ],
+    },
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "allowJs": false,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
+    "newLine": "lf"
+  },
+  "lib": [
+    "es2022"
+  ],
+  "include": [
+    "src",
+    "test"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "typedocOptions": {
+    "entryPoints": [
+      "src/index.ts"
+    ],
+    "out": "docs"
+  }
+}

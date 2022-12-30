@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "*"
+      ],
+    },
+  },
+  "exclude": [
+    "test/**/*",
+    "**/?(*.)+(spec|test).[tj]s?(x)"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "apkstats-js",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/RyuNen344/apkstats-js",
+  "author": "RyuNen344",
+  "license": "MIT",
+  "private": true
+}
