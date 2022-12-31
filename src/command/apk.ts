@@ -1,3 +1,5 @@
+import {ApkCompareOption} from "@/types/ApkCompareOption";
+
 export default interface Apk {
   summary(): string
 
@@ -7,12 +9,5 @@ export default interface Apk {
 
   features(notRequired: boolean): [string]
 
-  compare(other: any, option: CompareOption): any
-}
-
-export enum CompareOption {
-  None = "None",
-  DifferentOnly = "DifferentOnly",
-  FilesOnly = "FilesOnly",
-  PatchSize = "PatchSize"
+  compare(other: any, option: ApkCompareOption): any
 }
