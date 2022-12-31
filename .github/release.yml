@@ -1,0 +1,24 @@
+# https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes#example-configuration
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    authors:
+      - octocat
+  categories:
+    - title: ⚠️ Breaking Changes
+      labels:
+        - breaking-change
+    - title: 🎉 Exciting New Features
+      labels:
+        - enhancement
+    - title: 🪲 Bug fixes
+      labels:
+        - bug
+    - title: 🌲 Dependency updates
+      labels:
+        - dependencies
+        - dependency
+    - title: Other Changes
+      labels:
+        - "*"

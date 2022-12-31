@@ -1,0 +1,23 @@
+name: Check PR
+on:
+  pull_request:
+    types: [ opened, reopened, synchronize ]
+
+jobs:
+  check:
+    name: check lint and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/yarn
+      - name: run test
+        shell: bash
+        run: |
+          yarn test:ci
+      - name: run danger
+        shell: bash
+        run: |
+          yarn run danger ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
