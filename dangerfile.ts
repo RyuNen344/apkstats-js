@@ -7,11 +7,11 @@ import {schedule} from "danger";
 
 declare const danger: DangerDSLType
 
-export default async () => {
+schedule(async () => {
   if (!danger.github) {
     return
   }
   await yarn();
   await jest();
-}
-schedule(coverage());
+  await coverage();
+});
