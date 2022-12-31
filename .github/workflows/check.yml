@@ -11,6 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/yarn
+      - name: run lint
+        shell: bash
+        run: |
+          yarn lint:ci
       - name: run test
         shell: bash
         run: |
