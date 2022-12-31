@@ -22,5 +22,6 @@
   "rules": {
     "newline-before-return": "error",
     "no-var": "error"
-  }
+  },
+  "ignorePatterns": ["dist/**/*.ts", "dist/**/*.js"]
 }
