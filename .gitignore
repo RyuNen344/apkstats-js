@@ -12,6 +12,9 @@ dist/
 coverage/*
 test-results.json
 
+# lint
+lint-results.xml
+
 # mac
 .DS_Store
 
