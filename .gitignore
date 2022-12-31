@@ -10,7 +10,7 @@ dist/
 
 # test
 coverage/*
-test-result.json
+test-results.json
 
 # mac
 .DS_Store
