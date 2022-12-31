@@ -7,7 +7,7 @@ runs:
       with:
         node-version-file: '.node-version'
         cache: 'yarn'
-        cache-dependency-path: '**/package-lock.json'
+        cache-dependency-path: '**/yarn.lock'
     - name: yarn install
       shell: bash
       run: yarn install --frozen-lockfile
