@@ -13,5 +13,5 @@ export default async () => {
   }
   await yarn();
   await jest();
-  await schedule(coverage());
 }
+schedule(coverage());
