@@ -1,13 +1,17 @@
+// @ts-ignore
+import coverage from "danger-plugin-coverage";
 import yarn from "danger-plugin-yarn";
 import jest from "danger-plugin-jest";
-import {DangerDSLType} from "danger/distribution/dsl/DangerDSL";
 
-declare const danger: DangerDSLType
-export default async () => {
-  if (!danger.github) {
-    return
-  }
+const reporter = require("danger-plugin-lint-report")
 
-  await yarn();
-  await jest();
-}
+Promise.all([
+  yarn(),
+  jest(),
+  reporter.scan({
+    fileMask: "**/lint-results.xml",
+    reportSeverity: true,
+    requireLineModification: true,
+  }),
+  coverage()
+]).then(console.log);
