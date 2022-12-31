@@ -15,3 +15,5 @@ jobs:
         shell: bash
         run: |
           yarn run danger ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
