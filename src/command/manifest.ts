@@ -1,4 +1,4 @@
-interface Manifest {
+export default interface Manifest {
   print(): Document
 
   applicationId(): string
