@@ -66,7 +66,7 @@ generate_replay() {
     run apkanalyzer resources value --config default --name "ic_launcher_background" --type drawable --package "$package" "$_TEST_RESOURCE_BUILD_APK_ABS_PATH_/app-$1-$type.apk" >"$_TEST_RESOURCE_REPLAY_ABS_PATH_/resources-value-package-$1-$type"
     run apkanalyzer resources names --config default --type drawable "$_TEST_RESOURCE_BUILD_APK_ABS_PATH_/app-$1-$type.apk" >"$_TEST_RESOURCE_REPLAY_ABS_PATH_/resources-names-$1-$type"
     run apkanalyzer resources names --config default --type drawable --package "$package" "$_TEST_RESOURCE_BUILD_APK_ABS_PATH_/app-$1-$type.apk" >"$_TEST_RESOURCE_REPLAY_ABS_PATH_/resources-names-package-$1-$type"
-    run apkanalyzer resources xml --file "res/xml/data_extraction_rules.xml" "$_TEST_RESOURCE_BUILD_APK_ABS_PATH_/app-$1-$type.apk" >"$_TEST_RESOURCE_REPLAY_ABS_PATH_/resources-names-package-$1-$type.xml"
+    run apkanalyzer resources xml --file "res/color/m3_text_button_ripple_color_selector.xml" "$_TEST_RESOURCE_BUILD_APK_ABS_PATH_/app-$1-$type.apk" >"$_TEST_RESOURCE_REPLAY_ABS_PATH_/resources-names-package-$1-$type.xml"
 
   done
 }
