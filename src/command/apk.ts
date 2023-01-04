@@ -1,4 +1,5 @@
 import {ApkCompareOption} from "@/types/ApkCompareOption";
+import Feature from "@/types/Feature";
 import ApkInfo from "@/types/ApkInfo";
 
 export default interface Apk {
@@ -8,7 +9,7 @@ export default interface Apk {
 
   downloadSize(): number
 
-  features(notRequired: boolean): [string]
+  features(notRequired: boolean): Feature[]
 
   compare(other: string, option: ApkCompareOption): any
 }
