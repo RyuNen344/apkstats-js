@@ -3,8 +3,6 @@ set -euo pipefail
 
 . "$(git rev-parse --show-toplevel)/scripts/utilities"
 
-go_to_repo_root
-
 checking_command() {
   local -r cmd="$1"
 
@@ -22,8 +20,8 @@ checking_command() {
   fi
 }
 
+go_to_repo_root
 declare -a missing_required_components=()
-
 info 'check command...'
 
 if ! checking_command 'npm'; then
