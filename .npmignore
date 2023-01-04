@@ -2,6 +2,7 @@
 .github/
 .vscode/
 coverage/
+fixture/
 src/
 test/
 node_modules/
