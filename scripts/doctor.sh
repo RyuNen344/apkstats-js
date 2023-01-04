@@ -23,6 +23,16 @@ declare -a missing_required_components=()
 
 info 'check command...'
 
+if ! checking_command 'npm'; then
+  missing_required_components+=('npm')
+  warn "Please install NPM"
+fi
+
+if ! checking_command 'yarn'; then
+  missing_required_components+=('yarn')
+  warn "Please install NPM"
+fi
+
 if ! checking_command 'java'; then
   missing_required_components+=('java')
   warn "Please install JDK and export it to PATH"
