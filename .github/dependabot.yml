@@ -14,7 +14,7 @@ updates:
     commit-message:
       prefix: "github-actions: "
 
-  - package-ecosystem: "yarn"
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
