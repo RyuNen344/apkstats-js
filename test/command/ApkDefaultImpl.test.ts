@@ -9,12 +9,12 @@ describe("ApkDefaultImpl test", () => {
     }));
 
     const status = apkStatus({
-      path: "app-prod-debug.apk",
+      path: "test/__resource__/empty.apk",
       executor: new MockExecutor()
     })
     status.apk.summary()
-    
-    expect(executeMock).toBeCalledWith("apkanalyzer apk summary app-prod-debug.apk")
+
+    expect(executeMock).toBeCalledWith("apkanalyzer apk summary test/__resource__/empty.apk")
     expect(executeMock).toBeCalledTimes(1);
   })
 
