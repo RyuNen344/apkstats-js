@@ -26,6 +26,7 @@ lint-results.xml
 # intellij
 .idea/**.iml
 .idea/compiler.xml
+.idea/markdown.xml
 .idea/dictionaries
 .idea/misc.xml
 .idea/modules.xml
