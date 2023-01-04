@@ -11,6 +11,7 @@ dist/
 # test
 coverage/*
 test-results.json
+test/__resource__/builds/*
 
 # lint
 lint-results.xml
