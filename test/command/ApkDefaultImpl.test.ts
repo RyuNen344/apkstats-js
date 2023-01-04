@@ -74,7 +74,7 @@ describe("ApkDefaultImpl test", () => {
     })
 
     it("given not required true", () => {
-      const executeMock = jest.fn().mockReturnValue("android.hardware.faketouch implied: default feature for all apps\nandroid.hardware.camera not-required");
+      const executeMock = jest.fn().mockReturnValue("android.hardware.camera not-required");
       const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
         execute: executeMock
       }));
@@ -88,13 +88,17 @@ describe("ApkDefaultImpl test", () => {
       expect(executeMock).toBeCalledWith("apkanalyzer apk -h features --not-required test/__resource__/empty.apk")
       expect(executeMock).toBeCalledTimes(1);
       expect(actual).toStrictEqual([
-        new Feature("android.hardware.faketouch", "implied: default feature for all apps", false),
         new Feature("android.hardware.camera", "not-required", true)
       ])
     })
 
-    it("given windows linebreak", () => {
-      const executeMock = jest.fn().mockReturnValue("android.hardware.faketouch implied: default feature for all apps\tandroid.hardware.camera not-required");
+    it("given linebreaks", () => {
+      const executeMock = jest.fn().mockReturnValue(
+        "crlf linebreaks\r\n" +
+        "lf linebreaks\r" +
+        "cr linebreaks\n" +
+        "last linebreaks"
+      );
       const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
         execute: executeMock
       }));
@@ -108,11 +112,11 @@ describe("ApkDefaultImpl test", () => {
       expect(executeMock).toBeCalledWith("apkanalyzer apk -h features --not-required test/__resource__/empty.apk")
       expect(executeMock).toBeCalledTimes(1);
       expect(actual).toStrictEqual([
-        new Feature("android.hardware.faketouch", "implied: default feature for all apps", false),
-        new Feature("android.hardware.camera", "not-required", true)
+        new Feature("crlf", "linebreaks", false),
+        new Feature("lf", "linebreaks", false),
+        new Feature("cr", "linebreaks", false),
+        new Feature("last", "linebreaks", false),
       ])
     })
-
   })
-
 })

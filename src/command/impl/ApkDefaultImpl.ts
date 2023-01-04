@@ -43,8 +43,8 @@ export class ApkDefaultImpl implements Apk {
     command += ` ${this.path}`
 
     return this.executor.execute(command)
-      .replace("/(\\r\\n|\\n|\\r)/gm", "\n")
-      .split('\n')
+      .replace(/\r\n|\n|\r/g, "\n")
+      .split("\n")
       .map(value => {
         const name = value.substring(0, value.indexOf(' '))
         const desc = value.substring(value.indexOf(' ') + 1)
