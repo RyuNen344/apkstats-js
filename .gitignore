@@ -11,6 +11,8 @@ dist/
 # test
 coverage/*
 test-results.json
+test/__resource__/builds/*
+test/__resource__/replay/*
 
 # lint
 lint-results.xml
@@ -24,6 +26,7 @@ lint-results.xml
 # intellij
 .idea/**.iml
 .idea/compiler.xml
+.idea/markdown.xml
 .idea/dictionaries
 .idea/misc.xml
 .idea/modules.xml
