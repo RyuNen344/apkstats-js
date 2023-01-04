@@ -1,7 +1,8 @@
 import {ApkCompareOption} from "@/types/ApkCompareOption";
+import ApkInfo from "@/types/ApkInfo";
 
 export default interface Apk {
-  summary(): string
+  summary(): ApkInfo
 
   fileSize(): number
 
