@@ -24,17 +24,14 @@ run rm -rf ./test/__resource__/builds/*.apk
 
 cd "$_FIXTURE_APP_ROOT_ABS_PATH_"
 
-# normal build
-replace_manifest normal
-info "build normal apks"
-run copy_apk "$_DEBUG_APK_OUTPUT_PATH_" app-normal-debug.apk
-run copy_apk "$_RELEASE_APK_OUTPUT_PATH_" app-normal-release.apk
-
-# feature build
-replace_manifest feature
-info "build feature apks"
-run copy_apk "$_DEBUG_APK_OUTPUT_PATH_" app-feature-debug.apk
-run copy_apk "$_RELEASE_APK_OUTPUT_PATH_" app-feature-release.apk
+# build fixture apks
+declare -a apk_build_types=("normal" "feature")
+for name in "${apk_build_types[@]}"; do
+  info "build $name apks"
+  replace_manifest "$name"
+  run copy_apk "$_DEBUG_APK_OUTPUT_PATH_" "app-$name-debug.apk"
+  run copy_apk "$_RELEASE_APK_OUTPUT_PATH_" "app-$name-release.apk"
+done
 
 # reset git
 run git reset --hard
