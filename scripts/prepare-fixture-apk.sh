@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -euo pipefail
 
 . "$(git rev-parse --show-toplevel)/scripts/utilities"

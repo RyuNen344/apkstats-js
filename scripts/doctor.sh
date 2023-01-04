@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 set -euo pipefail
 
 . "$(git rev-parse --show-toplevel)/scripts/utilities"
@@ -11,6 +11,9 @@ checking_command() {
   sleep 1
 
   if type "$cmd" >/dev/null 2>&1; then
+    info "$_CHECK_MARK_ ${_ESCAPE_}[32m$cmd${_ESCAPE_}[m is found"
+    return 0
+  elif type "$cmd.bat" >/dev/null 2>&1; then
     info "$_CHECK_MARK_ ${_ESCAPE_}[32m$cmd${_ESCAPE_}[m is found"
     return 0
   else
