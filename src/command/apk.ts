@@ -9,5 +9,5 @@ export default interface Apk {
 
   features(notRequired: boolean): [string]
 
-  compare(other: any, option: ApkCompareOption): any
+  compare(other: string, option: ApkCompareOption): any
 }
