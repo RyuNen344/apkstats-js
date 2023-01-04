@@ -2,7 +2,7 @@ import Apk from "@/command/apk";
 import {ApkDefaultImpl} from "@/command/impl/ApkDefaultImpl";
 import {exists} from "@/util/file-util";
 
-export class ApkStats {
+export default class ApkStats {
   readonly path: string
   apk: Apk
 

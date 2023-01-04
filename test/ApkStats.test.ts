@@ -1,4 +1,4 @@
-import {ApkStats} from "@/ApkStats";
+import ApkStats from "@/ApkStats";
 import {ApkDefaultImpl} from "@/command/impl/ApkDefaultImpl";
 import Apk from "@/command/apk";
 
@@ -16,7 +16,7 @@ describe("test constructor", () => {
     expect(stats.apk).toBeInstanceOf(ApkDefaultImpl)
   });
 
-  it("given apk impl then set impl", () => {
+  it("given customized apk impl then set customized impl", () => {
     const stats = new ApkStats({
       path: ".gitignore",
       apk: <Apk>{}
