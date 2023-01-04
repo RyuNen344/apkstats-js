@@ -12,6 +12,7 @@ dist/
 coverage/*
 test-results.json
 test/__resource__/builds/*
+test/__resource__/replay/*
 
 # lint
 lint-results.xml
