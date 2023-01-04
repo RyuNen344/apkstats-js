@@ -13,6 +13,9 @@ checking_command() {
   if type "$cmd" >/dev/null 2>&1; then
     info "$_CHECK_MARK_ ${_ESCAPE_}[32m$cmd${_ESCAPE_}[m is found"
     return 0
+  elif type "$cmd.bat" >/dev/null 2>&1; then
+    info "$_CHECK_MARK_ ${_ESCAPE_}[32m$cmd${_ESCAPE_}[m is found"
+    return 0
   else
     warn "$_WARNING_ ${_ESCAPE_}[33m$cmd${_ESCAPE_}[m is not found"
     return 1
