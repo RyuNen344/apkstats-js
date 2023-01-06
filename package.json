@@ -17,10 +17,10 @@
     "coverage": "jest --coverage",
     "predocs": "rm -rf docs/",
     "docs": "typedoc",
-    "lint": "eslint 'src/**/*.{ts,tsx}'",
-    "lint:ci": "eslint 'src/**/*.{ts,tsx}' -f checkstyle > lint-results.xml",
-    "format": "prettier --write 'src/**/*.{ts,tsx}'",
-    "upgrade": "yarn up \"*\" \"@*/*\""
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "lint:ci": "eslint src/**/*.{ts,tsx} -f checkstyle > lint-results.xml",
+    "format": "prettier --write src/**/*.{ts,tsx}",
+    "upgrade": "yarn upgrade --latest"
   },
   "jest": {
     "verbose": true,
