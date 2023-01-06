@@ -4,6 +4,7 @@ export class FileError extends Error {
   constructor(type: FileErrorType) {
     super();
     this.type = type;
+    this.message = type;
   }
 }
 
