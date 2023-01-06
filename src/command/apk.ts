@@ -1,16 +1,16 @@
-import {ApkCompareOption} from "@/types/ApkCompareOption";
+import { ApkCompareOption } from "@/types/ApkCompareOption";
 import Feature from "@/types/Feature";
 import ApkInfo from "@/types/ApkInfo";
-import {ApkDiff} from "@/types/ApkDiff";
+import { ApkDiff } from "@/types/ApkDiff";
 
 export default interface Apk {
-  summary(): ApkInfo
+  summary(): ApkInfo;
 
-  fileSize(): number
+  fileSize(): number;
 
-  downloadSize(): number
+  downloadSize(): number;
 
-  features(notRequired: boolean): Feature[]
+  features(notRequired: boolean): Feature[];
 
-  compare(other: string, option?: ApkCompareOption): ApkDiff[]
+  compare(other: string, option?: ApkCompareOption): ApkDiff[];
 }

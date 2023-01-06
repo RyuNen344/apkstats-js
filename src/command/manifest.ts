@@ -1,17 +1,17 @@
 export default interface Manifest {
-  print(): Document
+  print(): Document;
 
-  applicationId(): string
+  applicationId(): string;
 
-  versionName(): string
+  versionName(): string;
 
-  versionCode(): string
+  versionCode(): string;
 
-  minSdk(): number
+  minSdk(): number;
 
-  targetSdk(): number
+  targetSdk(): number;
 
-  permissions(): [string]
+  permissions(): [string];
 
-  debuggable(): boolean
+  debuggable(): boolean;
 }

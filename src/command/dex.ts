@@ -1,12 +1,12 @@
 import ClassTree from "@/types/ClassTree";
-import {DexPackagesOption} from "@/types/DexPackagesOption";
+import { DexPackagesOption } from "@/types/DexPackagesOption";
 
 export default interface Dex {
-  list(): [string]
+  list(): [string];
 
-  references(files?: [string]): Map<string, number>
+  references(files?: [string]): Map<string, number>;
 
-  packages(option?: DexPackagesOption): [ClassTree]
+  packages(option?: DexPackagesOption): [ClassTree];
 
-  code(clazz: string, method?: string): string
+  code(clazz: string, method?: string): string;
 }

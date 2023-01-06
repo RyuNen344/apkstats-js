@@ -19,7 +19,7 @@ export default class ClassTree {
     this.definedMethodCount = definedMethodCount;
     this.referencedMethodCount = referencedMethodCount;
     this.byteSize = byteSize;
-    this.name = name
+    this.name = name;
   }
 }
 
@@ -27,12 +27,12 @@ export const enum ClassTreeType {
   Package = "Package",
   Class = "Class",
   Method = "Method",
-  Field = "Field"
+  Field = "Field",
 }
 
 export const enum ClassTreeStatus {
   Execute = "Execute",
   Keep = "Keep",
   Reference = "Reference",
-  Define = "Define"
+  Define = "Define",
 }

@@ -1,40 +1,40 @@
 export interface DexPackagesOptionDefinedOnly {
-  kind: "--defined-only"
+  kind: "--defined-only";
 }
 
 export interface DexPackagesOptionFiles {
-  kind: "--files"
+  kind: "--files";
 }
 
 export interface DexPackagesOptionProguardFolder {
-  kind: "--proguard-folder"
-  file: string
+  kind: "--proguard-folder";
+  file: string;
 }
 
 export interface DexPackagesOptionProguardMappings {
-  kind: "--proguard-mappings"
-  file: string
+  kind: "--proguard-mappings";
+  file: string;
 }
 
 export interface DexPackagesOptionProguardSeeds {
-  kind: "--proguard-seeds"
-  file: string
+  kind: "--proguard-seeds";
+  file: string;
 }
 
 export interface DexPackagesOptionProguardUsages {
-  kind: "--proguard-usages"
-  file: string
+  kind: "--proguard-usages";
+  file: string;
 }
 
 export interface DexPackagesOptionShowRemoved {
-  kind: "--show-removed"
+  kind: "--show-removed";
 }
 
 export type DexPackagesOption =
-  DexPackagesOptionDefinedOnly
+  | DexPackagesOptionDefinedOnly
   | DexPackagesOptionFiles
   | DexPackagesOptionProguardFolder
   | DexPackagesOptionProguardMappings
   | DexPackagesOptionProguardSeeds
   | DexPackagesOptionProguardUsages
-  | DexPackagesOptionShowRemoved
+  | DexPackagesOptionShowRemoved;

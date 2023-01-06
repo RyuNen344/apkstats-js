@@ -13,5 +13,5 @@ export const enum ResourceType {
   Mipmap = "Mipmap",
   String = "String",
   Style = "Style",
-  Xml = "Xml"
+  Xml = "Xml",
 }

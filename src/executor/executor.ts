@@ -1,3 +1,3 @@
 export default interface Executor {
-  execute(command: string): string
+  execute(command: string): string;
 }
