@@ -5,7 +5,6 @@ export type VersionName = string;
 export default class ApkInfo {
   applicationId: ApplicationId;
   versionCode: VersionCode;
-
   versionName: VersionName;
 
   constructor(applicationId: ApplicationId, versionCode: VersionCode, versionName: VersionName) {
