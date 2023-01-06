@@ -4,7 +4,7 @@
 
 This is a wrapper library of [apkanalyzer](https://developer.android.com/studio/command-line/apkanalyzer) for Android projects.
 
-This library allows you to type safe cli operations, and use it to danger or any other automation scripts.
+This library allows you to type safe cli operations, and use it in [danger](https://github.com/danger/danger-js) or any other automation scripts.
 
 Inspired by [jmatsu/danger-apkstats](https://github.com/jmatsu/danger-apkstats)
 
