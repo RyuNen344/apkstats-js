@@ -1,9 +1,9 @@
 export default class Feature {
-  name: string
+  readonly name: string
 
-  desc: string
+  readonly desc: string
 
-  notRequired: boolean
+  readonly notRequired: boolean
 
   constructor(
     name: string,

@@ -1,6 +1,7 @@
 import {ApkCompareOption} from "@/types/ApkCompareOption";
 import Feature from "@/types/Feature";
 import ApkInfo from "@/types/ApkInfo";
+import {ApkDiff} from "@/types/ApkDiff";
 
 export default interface Apk {
   summary(): ApkInfo
@@ -11,5 +12,5 @@ export default interface Apk {
 
   features(notRequired: boolean): Feature[]
 
-  compare(other: string, option: ApkCompareOption): any
+  compare(other: string, option?: ApkCompareOption): ApkDiff[]
 }
