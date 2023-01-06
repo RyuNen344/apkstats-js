@@ -1,17 +1,13 @@
 export default class Feature {
-  readonly name: string
+  readonly name: string;
 
-  readonly desc: string
+  readonly desc: string;
 
-  readonly notRequired: boolean
+  readonly notRequired: boolean;
 
-  constructor(
-    name: string,
-    desc: string,
-    notRequired: boolean
-  ) {
-    this.name = name
-    this.desc = desc
-    this.notRequired = notRequired
+  constructor(name: string, desc: string, notRequired: boolean) {
+    this.name = name;
+    this.desc = desc;
+    this.notRequired = notRequired;
   }
 }

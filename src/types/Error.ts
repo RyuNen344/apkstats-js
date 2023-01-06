@@ -1,5 +1,5 @@
 export class FileError extends Error {
-  readonly type: FileErrorType
+  readonly type: FileErrorType;
 
   constructor(type: FileErrorType) {
     super();

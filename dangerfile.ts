@@ -3,8 +3,9 @@ import coverage from "danger-plugin-coverage";
 import yarn from "danger-plugin-yarn";
 import jest from "danger-plugin-jest";
 
-const reporter = require("danger-plugin-lint-report")
+const reporter = require("danger-plugin-lint-report");
 
+// noinspection JSVoidFunctionReturnValueUsed
 Promise.all([
   yarn(),
   jest(),
@@ -13,5 +14,5 @@ Promise.all([
     reportSeverity: true,
     requireLineModification: true,
   }),
-  coverage()
+  coverage(),
 ]).then(console.log);

@@ -1,5 +1,5 @@
 export default interface Files {
-  list(): [string]
+  list(): [string];
 
-  cat(path: string): [string]
+  cat(path: string): [string];
 }
