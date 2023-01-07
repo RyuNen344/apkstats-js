@@ -16,6 +16,7 @@
     "test:ci": "jest --json --coverage > test-results.json",
     "coverage": "jest --coverage",
     "docs": "typedoc",
+    "package": "run-s clean build",
     "clean": "rimraf dist coverage docs",
     "lint": "eslint {src,test}/**/*.{ts,tsx}",
     "lint:ci": "eslint {src,test}/**/*.{ts,tsx} -f checkstyle > lint-results.xml",
