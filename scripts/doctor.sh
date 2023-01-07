@@ -31,7 +31,7 @@ fi
 
 if ! checking_command 'yarn'; then
   missing_required_components+=('yarn')
-  warn "Please install NPM"
+  warn "Please install Yarn"
 fi
 
 if ! checking_command 'java'; then
