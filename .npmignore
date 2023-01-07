@@ -1,8 +1,10 @@
 .idea/
+.run/
 .github/
 .vscode/
 coverage/
 fixture/
+scripts/
 src/
 test/
 node_modules/
@@ -11,7 +13,10 @@ node_modules/
 .eslintrc.json
 .gitignore
 .node-version
+.nvmrc
 .yarnrc.yml
+dangerfile.ts
+lint-results.xml
 tsconfig.json
 tsconfig.build.json
 renovate.json
