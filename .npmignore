@@ -4,6 +4,7 @@
 .vscode/
 coverage/
 fixture/
+scripts/
 src/
 test/
 node_modules/
