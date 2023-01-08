@@ -19,14 +19,13 @@
     "test:ci": "jest --json --coverage > test-results.json",
     "coverage": "jest --coverage",
     "docs": "typedoc",
-    "package:pre": "run-s clean build",
-    "package:exec": "npm publish",
+    "package": "run-s clean build",
     "clean": "rimraf dist coverage docs",
     "lint": "eslint {src,test}/**/*.{ts,tsx}",
     "lint:ci": "eslint {src,test}/**/*.{ts,tsx} -f checkstyle > lint-results.xml",
     "format": "prettier --write {src,test}/**/*.{ts,tsx}",
     "upgrade": "yarn upgrade --latest",
-    "publish": "run-s package:*"
+    "publish": "run-s package && npm publish"
   },
   "jest": {
     "verbose": true,
