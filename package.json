@@ -25,7 +25,7 @@
     "lint:ci": "eslint {src,test}/**/*.{ts,tsx} -f checkstyle > lint-results.xml",
     "format": "prettier --write {src,test}/**/*.{ts,tsx}",
     "upgrade": "yarn upgrade --latest",
-    "publish": "run-s package && npm publish"
+    "pub": "run-s package && npm publish"
   },
   "jest": {
     "verbose": true,
