@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/RyuNen344/apkstats-js/compare/0.0.2...0.0.3) (2023-01-08)
+
+
+### Bug Fixes
+
+* manifest version ([f19f98f](https://github.com/RyuNen344/apkstats-js/commit/f19f98fae2a3b57016becabf6010cc3bab98bd25))
+
 ## [0.0.2](https://github.com/RyuNen344/apkstats-js/compare/0.0.1...0.0.2) (2023-01-08)
 
 
