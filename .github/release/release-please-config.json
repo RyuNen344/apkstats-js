@@ -2,7 +2,8 @@
   "release-type": "node",
   "packages": {
     ".": {
-      "include-v-in-tag": false
+      "include-v-in-tag": false,
+      "tag-separator": false
     }
   }
 }
