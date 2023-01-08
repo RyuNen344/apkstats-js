@@ -1,17 +1,60 @@
+import { ApplicationId, VersionCode, VersionName } from "@/types/ApkInfo";
+import { Xml } from "@/types/Manifest";
+
 export default interface Manifest {
-  print(): Document;
+  /**
+   * manifest print
+   *
+   * Prints the APK manifest in XML format.
+   */
+  print(): Xml;
 
-  applicationId(): string;
+  /**
+   * manifest application-id
+   *
+   * Prints the application ID value.
+   */
+  applicationId(): ApplicationId;
 
-  versionName(): string;
+  /**
+   * manifest version-name
+   *
+   * Prints the version name value.
+   */
+  versionName(): VersionName;
 
-  versionCode(): string;
+  /**
+   * manifest version-code
+   *
+   * Prints the version code value.
+   */
+  versionCode(): VersionCode;
 
+  /**
+   * manifest min-sdk
+   *
+   * Prints the minimum SDK version.
+   */
   minSdk(): number;
 
+  /**
+   * manifest target-sdk
+   *
+   * Prints the target SDK version.
+   */
   targetSdk(): number;
 
-  permissions(): [string];
+  /**
+   * manifest permissions
+   *
+   * Prints the list of permissions.
+   */
+  permissions(): string[];
 
+  /**
+   * manifest debuggable
+   *
+   * Prints whether the app is debuggable.
+   */
   debuggable(): boolean;
 }
