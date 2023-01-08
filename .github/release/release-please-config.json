@@ -3,5 +3,5 @@
   "packages": {
     ".": {}
   },
-  "include-v-in-tag": false
+  "include-v-in-tags": false
 }
