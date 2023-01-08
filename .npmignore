@@ -12,6 +12,7 @@ node_modules/
 .editorconfig
 .eslintrc.json
 .gitignore
+.release-please-manifest.json
 .node-version
 .nvmrc
 .yarnrc.yml
