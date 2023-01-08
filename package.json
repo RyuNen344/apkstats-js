@@ -60,5 +60,8 @@
     "tsconfig-paths": "^4.1.2",
     "typedoc": "^0.23.23",
     "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "xml-js": "^1.6.11"
   }
 }

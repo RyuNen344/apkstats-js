@@ -19,19 +19,16 @@ export class ApkDefaultImpl implements Apk {
   summary(): ApkInfo {
     const command = `apkanalyzer apk summary "${this.path}"`;
     const [applicationId, versionCode, versionName] = this.executor.execute(command).split(" ");
-
     return new ApkInfo(applicationId, parseFloat(versionCode), versionName);
   }
 
   fileSize(): number {
     const command = `apkanalyzer apk file-size "${this.path}"`;
-
     return parseFloat(this.executor.execute(command));
   }
 
   downloadSize(): number {
     const command = `apkanalyzer apk download-size "${this.path}"`;
-
     return parseFloat(this.executor.execute(command));
   }
 
@@ -49,7 +46,6 @@ export class ApkDefaultImpl implements Apk {
       .map((value) => {
         const name = value.substring(0, value.indexOf(" "));
         const desc = value.substring(value.indexOf(" ") + 1);
-
         return new Feature(name, desc, desc === "not-required");
       });
   }
@@ -80,7 +76,6 @@ export class ApkDefaultImpl implements Apk {
           value.indexOf("\t", oldSize.length + newSize.length + 4)
         );
         const path = value.substring(oldSize.length + newSize.length + sizeDifference.length + 3);
-
         return new ApkDiff(parseFloat(oldSize), parseFloat(newSize), parseFloat(sizeDifference), path);
       });
   }

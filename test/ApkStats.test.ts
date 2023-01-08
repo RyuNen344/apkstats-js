@@ -4,6 +4,8 @@ import Apk from "@/command/apk";
 import { FileError, FileErrorType } from "@/types/Error";
 import ExecutorDefaultImpl from "@/executor/impl/ExecutorDefaultImpl";
 import Executor from "@/executor/executor";
+import Manifest from "@/command/manifest";
+import { ManifestDefaultImpl } from "@/command/impl/ManifestDefaultImpl";
 
 describe("test constructor check", () => {
   it("given valid file path then success", () => {
@@ -34,7 +36,7 @@ describe("test constructor check", () => {
   });
 });
 
-describe("test implemenatation delegate", () => {
+describe("test implementation delegate", () => {
   it("given null executor impl then set default impl", () => {
     const stats = new ApkStats({
       path: "test/__resource__/empty.apk",
@@ -63,5 +65,20 @@ describe("test implemenatation delegate", () => {
       apk: <Apk>{},
     });
     expect(stats.apk).not.toBeInstanceOf(ApkDefaultImpl);
+  });
+
+  it("given null manifest impl then set default impl ", () => {
+    const stats = new ApkStats({
+      path: "test/__resource__/empty.apk",
+    });
+    expect(stats.manifest).toBeInstanceOf(ManifestDefaultImpl);
+  });
+
+  it("given customized manifest impl then set customized impl", () => {
+    const stats = new ApkStats({
+      path: "test/__resource__/empty.apk",
+      manifest: <Manifest>{},
+    });
+    expect(stats.manifest).not.toBeInstanceOf(ManifestDefaultImpl);
   });
 });
