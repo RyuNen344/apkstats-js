@@ -3,6 +3,11 @@ on:
   pull_request:
     types: [ opened, reopened, synchronize ]
 
+permissions:
+  issues: write
+  pull-requests: write
+  statuses: write
+
 jobs:
   check:
     name: check lint and test
@@ -25,3 +30,8 @@ jobs:
           yarn run danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: auto merge
+        uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          approve: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
