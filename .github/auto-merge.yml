@@ -1,4 +1,3 @@
 # https://github.com/marketplace/actions/dependabot-auto-merge
 - match:
-    dependency_name: all
     update_type: semver:minor
