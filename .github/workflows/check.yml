@@ -33,5 +33,5 @@ jobs:
       - name: auto merge
         uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
-          approve: true
+          command: "squash and merge"
           github-token: ${{ secrets.GITHUB_TOKEN }}
