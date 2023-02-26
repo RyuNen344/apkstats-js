@@ -1,4 +1,4 @@
 # https://github.com/marketplace/actions/dependabot-auto-merge
 - match:
-    dependency_name: all
+    dependency_type: all
     update_type: semver:minor
