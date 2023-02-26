@@ -2,6 +2,12 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  issues: write
+  pull-requests: write
+  statuses: write
+
 name: release-please
 jobs:
   release-please:
