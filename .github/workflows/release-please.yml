@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.DEPENDABOT_TOKEN }}
           release-type: node
           include-v-in-tag: false
           default-branch: main
