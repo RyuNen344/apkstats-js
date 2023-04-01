@@ -60,7 +60,7 @@
     "rmraf": "^1.0.3",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
-    "tsc-alias": "^1.8.4",
+    "tsc-alias": "^1.8.5",
     "tsconfig-paths": "^4.1.2",
     "typedoc": "^0.23.28",
     "typescript": "^4.9.5"
