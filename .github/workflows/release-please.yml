@@ -4,9 +4,8 @@ on:
       - main
 
 permissions:
-  issues: write
+  contents: write
   pull-requests: write
-  statuses: write
 
 name: release-please
 jobs:
