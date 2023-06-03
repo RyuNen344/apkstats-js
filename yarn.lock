@@ -1576,10 +1576,10 @@ danger-plugin-jest@^1.3.0:
   dependencies:
     strip-ansi "^4.0.0"
 
-danger-plugin-lint-report@^1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/danger-plugin-lint-report/-/danger-plugin-lint-report-1.7.1.tgz#126d457ab52ac5f9f7f3e817531ee090d597bd8f"
-  integrity sha512-RfDV4mjLLEmk3m6VkMvMwYx2Gsm5Uu+rMp9h8dpbf3tYPA4DLYx7/2QzoAzB+pwnN6nwYGGB6fFVeRcveKyRZA==
+danger-plugin-lint-report@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/danger-plugin-lint-report/-/danger-plugin-lint-report-1.8.1.tgz#993f090bcdb8c0d7db5302b256e956bb743279fc"
+  integrity sha512-guohAjrKByy7qxrg1rCGlsZBcgtl/1fcIdwMdMYcYDIiETUUZNFK7M5/oNmXoFNKXGgdz1JXyhW+ht7tNbPL5Q==
   dependencies:
     "@types/node" "^16.6.1"
     glob "^7.1.7"
