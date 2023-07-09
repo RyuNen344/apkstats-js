@@ -18,16 +18,13 @@ jobs:
       - uses: ./.github/actions/yarn
       - name: run lint
         shell: bash
-        run: |
-          yarn lint:ci
+        run: yarn lint:ci
       - name: run test
         shell: bash
-        run: |
-          yarn test:ci
+        run: yarn test:ci
       - name: run danger
         shell: bash
-        run: |
-          yarn run danger ci
+        run: yarn run danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: auto merge
