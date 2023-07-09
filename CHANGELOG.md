@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.4](https://github.com/RyuNen344/apkstats-js/compare/0.0.3...0.0.4) (2023-07-09)
+
+
+### Bug Fixes
+
+* dependabot auto merge command ([#67](https://github.com/RyuNen344/apkstats-js/issues/67)) ([85b4f4d](https://github.com/RyuNen344/apkstats-js/commit/85b4f4dd0568633070c4ceedb62ddc72a1c79d37))
+* npm publish script ([#35](https://github.com/RyuNen344/apkstats-js/issues/35)) ([2ea0af4](https://github.com/RyuNen344/apkstats-js/commit/2ea0af4c2021ac6137cfe3e76b0ffee37caaf7f7))
+
 ## [0.0.3](https://github.com/RyuNen344/apkstats-js/compare/0.0.2...0.0.3) (2023-01-08)
 
 
