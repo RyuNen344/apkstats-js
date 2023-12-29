@@ -1,9 +1,9 @@
-import { apkStatus } from "@/index";
+import {apkStatus} from "@/index";
 import Executor from "@/executor/executor";
 import ApkInfo from "@/types/ApkInfo";
 import Feature from "@/types/Feature";
-import { FileError, FileErrorType } from "@/types/Error";
-import { ApkDiff } from "@/types/ApkDiff";
+import {FileError, FileErrorType} from "@/types/Error";
+import {ApkDiff} from "@/types/ApkDiff";
 
 describe("ApkDefaultImpl test", () => {
   it("test summary", () => {
@@ -35,8 +35,8 @@ describe("ApkDefaultImpl test", () => {
     });
     const actual = status.apk.fileSize();
 
-    expect(executeMock).toBeCalledWith('apkanalyzer apk file-size "test/__resource__/empty.apk"');
-    expect(executeMock).toBeCalledTimes(1);
+    expect(executeMock).toHaveBeenCalledWith('apkanalyzer apk file-size "test/__resource__/empty.apk"');
+    expect(executeMock).toHaveBeenCalledWith(1);
     expect(actual).toBe(32453241);
   });
 
@@ -70,8 +70,8 @@ describe("ApkDefaultImpl test", () => {
       });
       const actual = status.apk.features(false);
 
-      expect(executeMock).toBeCalledWith('apkanalyzer apk -h features "test/__resource__/empty.apk"');
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledWith('apkanalyzer apk -h features "test/__resource__/empty.apk"');
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual([
         new Feature("android.hardware.faketouch", "implied: default feature for all apps", false),
       ]);
@@ -89,8 +89,8 @@ describe("ApkDefaultImpl test", () => {
       });
       const actual = status.apk.features(true);
 
-      expect(executeMock).toBeCalledWith('apkanalyzer apk -h features --not-required "test/__resource__/empty.apk"');
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledWith('apkanalyzer apk -h features --not-required "test/__resource__/empty.apk"');
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual([new Feature("android.hardware.camera", "not-required", true)]);
     });
 
@@ -108,8 +108,8 @@ describe("ApkDefaultImpl test", () => {
       });
       const actual = status.apk.features(true);
 
-      expect(executeMock).toBeCalledWith('apkanalyzer apk -h features --not-required "test/__resource__/empty.apk"');
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledWith('apkanalyzer apk -h features --not-required "test/__resource__/empty.apk"');
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual([
         new Feature("crlf", "linebreaks", false),
         new Feature("lf", "linebreaks", false),
@@ -128,7 +128,7 @@ describe("ApkDefaultImpl test", () => {
 
       expect(() => {
         status.apk.compare("test/__resource__/vacuity");
-      }).toThrowError(new FileError(FileErrorType.NOT_FOUND));
+      }).toThrow(new FileError(FileErrorType.NOT_FOUND));
     });
 
     it("given invalid mime type file path of targets for comparison then throws error", () => {
@@ -139,7 +139,7 @@ describe("ApkDefaultImpl test", () => {
 
       expect(() => {
         status.apk.compare("test/__resource__/empty");
-      }).toThrowError(new FileError(FileErrorType.INVALID_MIME));
+      }).toThrow(new FileError(FileErrorType.INVALID_MIME));
     });
 
     it("given no option", () => {
@@ -164,10 +164,10 @@ describe("ApkDefaultImpl test", () => {
       });
       const actual = status.apk.compare("test/__resource__/empty.apk");
 
-      expect(executeMock).toBeCalledWith(
+      expect(executeMock).toHaveBeenCalledWith(
         'apkanalyzer apk compare "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual([
         new ApkDiff(9363049, 10950174, 1587125, "/"),
         new ApkDiff(8129560, 9180200, 1050640, "/classes.dex"),
@@ -201,10 +201,10 @@ describe("ApkDefaultImpl test", () => {
       });
       const actual = status.apk.compare("test/__resource__/empty.apk", { kind: "--different-only" });
 
-      expect(executeMock).toBeCalledWith(
+      expect(executeMock).toHaveBeenCalledWith(
         'apkanalyzer apk compare --different-only "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual([
         new ApkDiff(9363049, 10950174, 1587125, "/"),
         new ApkDiff(8129560, 9180200, 1050640, "/classes.dex"),
@@ -238,10 +238,10 @@ describe("ApkDefaultImpl test", () => {
       });
       const actual = status.apk.compare("test/__resource__/empty.apk", { kind: "--files-only" });
 
-      expect(executeMock).toBeCalledWith(
+      expect(executeMock).toHaveBeenCalledWith(
         'apkanalyzer apk compare --files-only "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual([
         new ApkDiff(9363049, 10950174, 1587125, "/"),
         new ApkDiff(8129560, 9180200, 1050640, "/classes.dex"),
@@ -275,10 +275,10 @@ describe("ApkDefaultImpl test", () => {
       });
       const actual = status.apk.compare("test/__resource__/empty.apk", { kind: "--patch-size" });
 
-      expect(executeMock).toBeCalledWith(
+      expect(executeMock).toHaveBeenCalledWith(
         'apkanalyzer apk compare --patch-size "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual([
         new ApkDiff(9363049, 10950174, 1587125, "/"),
         new ApkDiff(8129560, 9180200, 1050640, "/classes.dex"),
@@ -312,10 +312,10 @@ describe("ApkDefaultImpl test", () => {
       });
       const actual = status.apk.compare("test/__resource__/empty.apk");
 
-      expect(executeMock).toBeCalledWith(
+      expect(executeMock).toHaveBeenCalledWith(
         'apkanalyzer apk compare "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual([
         new ApkDiff(9363049, 10950174, 1587125, "/"),
         new ApkDiff(8129560, 9180200, 1050640, "/classes.dex"),

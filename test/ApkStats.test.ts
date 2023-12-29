@@ -1,11 +1,11 @@
 import ApkStats from "@/ApkStats";
-import { ApkDefaultImpl } from "@/command/impl/ApkDefaultImpl";
+import {ApkDefaultImpl} from "@/command/impl/ApkDefaultImpl";
 import Apk from "@/command/apk";
-import { FileError, FileErrorType } from "@/types/Error";
+import {FileError, FileErrorType} from "@/types/Error";
 import ExecutorDefaultImpl from "@/executor/impl/ExecutorDefaultImpl";
 import Executor from "@/executor/executor";
 import Manifest from "@/command/manifest";
-import { ManifestDefaultImpl } from "@/command/impl/ManifestDefaultImpl";
+import {ManifestDefaultImpl} from "@/command/impl/ManifestDefaultImpl";
 
 describe("test constructor check", () => {
   it("given valid file path then success", () => {
@@ -14,7 +14,7 @@ describe("test constructor check", () => {
         new ApkStats({
           path: "test/__resource__/empty.apk",
         })
-    ).not.toThrowError();
+    ).not.toThrow();
   });
 
   it("given vacuity file path then throws error", () => {
@@ -23,7 +23,7 @@ describe("test constructor check", () => {
         new ApkStats({
           path: "test/__resource__/vacuity",
         })
-    ).toThrowError(new FileError(FileErrorType.NOT_FOUND));
+    ).toThrow(new FileError(FileErrorType.NOT_FOUND));
   });
 
   it("given invalid mime type file path then throws error", () => {
@@ -32,7 +32,7 @@ describe("test constructor check", () => {
         new ApkStats({
           path: "test/__resource__/empty",
         })
-    ).toThrowError(new FileError(FileErrorType.INVALID_MIME));
+    ).toThrow(new FileError(FileErrorType.INVALID_MIME));
   });
 });
 
