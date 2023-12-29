@@ -152,7 +152,7 @@ describe("ApkDefaultImpl test", () => {
             "827244\t848512\t21268\t/resources.arsc\n" +
             "0\t1704\t1704\t/classes3.dex\n" +
             "3840\t3928\t88\t/AndroidManifest.xml\n" +
-            "0\t114144\t114144\t/res/drawable/"
+            "0\t114144\t114144\t/res/drawable/",
         );
       const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
         execute: executeMock,
@@ -165,7 +165,7 @@ describe("ApkDefaultImpl test", () => {
       const actual = status.apk.compare("test/__resource__/empty.apk");
 
       expect(executeMock).toBeCalledWith(
-        'apkanalyzer apk compare "test/__resource__/empty.apk" "test/__resource__/empty.apk"'
+        'apkanalyzer apk compare "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
       expect(executeMock).toBeCalledTimes(1);
       expect(actual).toStrictEqual([
@@ -189,7 +189,7 @@ describe("ApkDefaultImpl test", () => {
             "827244\t848512\t21268\t/resources.arsc\n" +
             "0\t1704\t1704\t/classes3.dex\n" +
             "3840\t3928\t88\t/AndroidManifest.xml\n" +
-            "0\t114144\t114144\t/res/drawable/"
+            "0\t114144\t114144\t/res/drawable/",
         );
       const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
         execute: executeMock,
@@ -202,7 +202,7 @@ describe("ApkDefaultImpl test", () => {
       const actual = status.apk.compare("test/__resource__/empty.apk", { kind: "--different-only" });
 
       expect(executeMock).toBeCalledWith(
-        'apkanalyzer apk compare --different-only "test/__resource__/empty.apk" "test/__resource__/empty.apk"'
+        'apkanalyzer apk compare --different-only "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
       expect(executeMock).toBeCalledTimes(1);
       expect(actual).toStrictEqual([
@@ -226,7 +226,7 @@ describe("ApkDefaultImpl test", () => {
             "827244\t848512\t21268\t/resources.arsc\n" +
             "0\t1704\t1704\t/classes3.dex\n" +
             "3840\t3928\t88\t/AndroidManifest.xml\n" +
-            "0\t114144\t114144\t/res/drawable/"
+            "0\t114144\t114144\t/res/drawable/",
         );
       const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
         execute: executeMock,
@@ -239,7 +239,7 @@ describe("ApkDefaultImpl test", () => {
       const actual = status.apk.compare("test/__resource__/empty.apk", { kind: "--files-only" });
 
       expect(executeMock).toBeCalledWith(
-        'apkanalyzer apk compare --files-only "test/__resource__/empty.apk" "test/__resource__/empty.apk"'
+        'apkanalyzer apk compare --files-only "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
       expect(executeMock).toBeCalledTimes(1);
       expect(actual).toStrictEqual([
@@ -263,7 +263,7 @@ describe("ApkDefaultImpl test", () => {
             "827244\t848512\t21268\t/resources.arsc\n" +
             "0\t1704\t1704\t/classes3.dex\n" +
             "3840\t3928\t88\t/AndroidManifest.xml\n" +
-            "0\t114144\t114144\t/res/drawable/"
+            "0\t114144\t114144\t/res/drawable/",
         );
       const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
         execute: executeMock,
@@ -276,7 +276,7 @@ describe("ApkDefaultImpl test", () => {
       const actual = status.apk.compare("test/__resource__/empty.apk", { kind: "--patch-size" });
 
       expect(executeMock).toBeCalledWith(
-        'apkanalyzer apk compare --patch-size "test/__resource__/empty.apk" "test/__resource__/empty.apk"'
+        'apkanalyzer apk compare --patch-size "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
       expect(executeMock).toBeCalledTimes(1);
       expect(actual).toStrictEqual([
@@ -300,7 +300,7 @@ describe("ApkDefaultImpl test", () => {
             "827244\t848512\t21268\t/resources.arsc\n" +
             "0\t1704\t1704\t/classes3.dex\n" +
             "3840\t3928\t88\t/AndroidManifest.xml\n" +
-            "0\t114144\t114144\t/res/drawable/"
+            "0\t114144\t114144\t/res/drawable/",
         );
       const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
         execute: executeMock,
@@ -313,7 +313,7 @@ describe("ApkDefaultImpl test", () => {
       const actual = status.apk.compare("test/__resource__/empty.apk");
 
       expect(executeMock).toBeCalledWith(
-        'apkanalyzer apk compare "test/__resource__/empty.apk" "test/__resource__/empty.apk"'
+        'apkanalyzer apk compare "test/__resource__/empty.apk" "test/__resource__/empty.apk"',
       );
       expect(executeMock).toBeCalledTimes(1);
       expect(actual).toStrictEqual([

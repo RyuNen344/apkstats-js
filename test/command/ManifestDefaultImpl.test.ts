@@ -80,7 +80,7 @@ describe("ManifestDefaultImpl test", () => {
           '        android:value="androidx.startup"/>\n' +
           "    </provider>\n" +
           "  </application>\n" +
-          "</manifest>"
+          "</manifest>",
       );
     const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
       execute: executeMock,
@@ -351,7 +351,7 @@ describe("ManifestDefaultImpl test", () => {
           "android.permission.CAMERA\n" +
             "android.permission.NETWORK\r\n" +
             "android.permission.WAKE_LOCK\r" +
-            "com.ryunen344.fixture.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+            "com.ryunen344.fixture.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
         );
       const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
         execute: executeMock,

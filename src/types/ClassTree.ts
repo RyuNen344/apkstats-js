@@ -12,7 +12,7 @@ export default class ClassTree {
     definedMethodCount: number,
     referencedMethodCount: number,
     byteSize: number,
-    name: string
+    name: string,
   ) {
     this.type = type;
     this.status = status;
