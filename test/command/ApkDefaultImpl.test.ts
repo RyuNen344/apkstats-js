@@ -36,7 +36,7 @@ describe("ApkDefaultImpl test", () => {
     const actual = status.apk.fileSize();
 
     expect(executeMock).toHaveBeenCalledWith('apkanalyzer apk file-size "test/__resource__/empty.apk"');
-    expect(executeMock).toHaveBeenCalledWith(1);
+    expect(executeMock).toHaveBeenCalledTimes(1);
     expect(actual).toBe(32453241);
   });
 
@@ -52,8 +52,8 @@ describe("ApkDefaultImpl test", () => {
     });
     const actual = status.apk.downloadSize();
 
-    expect(executeMock).toBeCalledWith('apkanalyzer apk download-size "test/__resource__/empty.apk"');
-    expect(executeMock).toBeCalledTimes(1);
+    expect(executeMock).toHaveBeenCalledWith('apkanalyzer apk download-size "test/__resource__/empty.apk"');
+    expect(executeMock).toHaveBeenCalledTimes(1);
     expect(actual).toBe(32453241);
   });
 
