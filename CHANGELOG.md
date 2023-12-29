@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.5](https://github.com/RyuNen344/apkstats-js/compare/0.0.4...0.0.5) (2023-12-29)
+
+
+### Features
+
+* support files list ([#237](https://github.com/RyuNen344/apkstats-js/issues/237)) ([4453ce6](https://github.com/RyuNen344/apkstats-js/commit/4453ce68a0e2edc2e0a23b8957dec03de77a4444))
+
+
+### Bug Fixes
+
+* package.json to work lint ([#235](https://github.com/RyuNen344/apkstats-js/issues/235)) ([628907f](https://github.com/RyuNen344/apkstats-js/commit/628907f008819b8aa7143028bf1c42bc31c6b00d))
+
 ## [0.0.4](https://github.com/RyuNen344/apkstats-js/compare/0.0.3...0.0.4) (2023-07-09)
 
 
