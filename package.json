@@ -23,7 +23,7 @@
     "clean": "rimraf dist coverage docs",
     "lint": "eslint '{src,test}/**/*.{ts,tsx}'",
     "lint:ci": "eslint '{src,test}/**/*.{ts,tsx}' -f checkstyle > lint-results.xml",
-    "format": "prettier --write {src,test}/**/*.{ts,tsx}",
+    "format": "prettier --write {src,test}/**/*.ts",
     "upgrade": "yarn upgrade --latest",
     "pub": "run-s package && npm publish"
   },
