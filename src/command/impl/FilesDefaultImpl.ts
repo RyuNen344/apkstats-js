@@ -1,6 +1,6 @@
 import Files from "@/command/files";
 import Executor from "@/executor/executor";
-import {FilesListOption, implementFilesListOption} from "@/types/FilesListOption";
+import {FilesListOption} from "@/types/FilesListOption";
 
 export class FilesDefaultImpl implements Files {
   readonly path: string;
@@ -15,12 +15,14 @@ export class FilesDefaultImpl implements Files {
     let command = `apkanalyzer files list "${this.path}"`;
     if (option !== null) {
       option
-        ?.filter((e, index, self) => self.indexOf(e) === index && implementFilesListOption(e))
+        ?.filter((x, i, self) => self.findIndex(y => y.kind === x.kind) === i)
         ?.forEach((e) => command += ` ${e.kind}`)
     }
+
     return this.executor
       .execute(command)
       .split("\n")
+      .filter(value => value.length > 0)
   }
 
   cat(path: string): [string] {
