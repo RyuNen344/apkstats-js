@@ -1,5 +1,5 @@
 import Executor from "@/executor/executor";
-import { apkStatus } from "@/index";
+import {apkStatus} from "@/index";
 
 describe("ManifestDefaultImpl test", () => {
   it("test print", () => {
@@ -80,7 +80,7 @@ describe("ManifestDefaultImpl test", () => {
           '        android:value="androidx.startup"/>\n' +
           "    </provider>\n" +
           "  </application>\n" +
-          "</manifest>"
+          "</manifest>",
       );
     const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
       execute: executeMock,
@@ -92,8 +92,8 @@ describe("ManifestDefaultImpl test", () => {
     });
     const actual = status.manifest.print();
 
-    expect(executeMock).toBeCalledWith('apkanalyzer manifest print "test/__resource__/empty.apk"');
-    expect(executeMock).toBeCalledTimes(1);
+    expect(executeMock).toHaveBeenCalledWith('apkanalyzer manifest print "test/__resource__/empty.apk"');
+    expect(executeMock).toHaveBeenCalledTimes(1);
     expect(actual).toStrictEqual({
       declaration: {
         attributes: {
@@ -256,8 +256,8 @@ describe("ManifestDefaultImpl test", () => {
     });
     const actual = status.manifest.applicationId();
 
-    expect(executeMock).toBeCalledWith('apkanalyzer manifest application-id "test/__resource__/empty.apk"');
-    expect(executeMock).toBeCalledTimes(1);
+    expect(executeMock).toHaveBeenCalledWith('apkanalyzer manifest application-id "test/__resource__/empty.apk"');
+    expect(executeMock).toHaveBeenCalledTimes(1);
     expect(actual).toBe("com.ryunen344.fixture");
   });
 
@@ -273,8 +273,8 @@ describe("ManifestDefaultImpl test", () => {
     });
     const actual = status.manifest.versionName();
 
-    expect(executeMock).toBeCalledWith('apkanalyzer manifest version-name "test/__resource__/empty.apk"');
-    expect(executeMock).toBeCalledTimes(1);
+    expect(executeMock).toHaveBeenCalledWith('apkanalyzer manifest version-name "test/__resource__/empty.apk"');
+    expect(executeMock).toHaveBeenCalledTimes(1);
     expect(actual).toBe("1.0.0-dev");
   });
 
@@ -290,8 +290,8 @@ describe("ManifestDefaultImpl test", () => {
     });
     const actual = status.manifest.versionCode();
 
-    expect(executeMock).toBeCalledWith('apkanalyzer manifest version-code "test/__resource__/empty.apk"');
-    expect(executeMock).toBeCalledTimes(1);
+    expect(executeMock).toHaveBeenCalledWith('apkanalyzer manifest version-code "test/__resource__/empty.apk"');
+    expect(executeMock).toHaveBeenCalledTimes(1);
     expect(actual).toBe(34);
   });
   it("test minSdk", () => {
@@ -306,8 +306,8 @@ describe("ManifestDefaultImpl test", () => {
     });
     const actual = status.manifest.minSdk();
 
-    expect(executeMock).toBeCalledWith('apkanalyzer manifest min-sdk "test/__resource__/empty.apk"');
-    expect(executeMock).toBeCalledTimes(1);
+    expect(executeMock).toHaveBeenCalledWith('apkanalyzer manifest min-sdk "test/__resource__/empty.apk"');
+    expect(executeMock).toHaveBeenCalledTimes(1);
     expect(actual).toBe(29);
   });
   it("test targetSdk", () => {
@@ -322,8 +322,8 @@ describe("ManifestDefaultImpl test", () => {
     });
     const actual = status.manifest.targetSdk();
 
-    expect(executeMock).toBeCalledWith('apkanalyzer manifest target-sdk "test/__resource__/empty.apk"');
-    expect(executeMock).toBeCalledTimes(1);
+    expect(executeMock).toHaveBeenCalledWith('apkanalyzer manifest target-sdk "test/__resource__/empty.apk"');
+    expect(executeMock).toHaveBeenCalledTimes(1);
     expect(actual).toBe(33);
   });
   describe("test permissions", () => {
@@ -339,8 +339,8 @@ describe("ManifestDefaultImpl test", () => {
       });
       const actual = status.manifest.permissions();
 
-      expect(executeMock).toBeCalledWith('apkanalyzer manifest permissions "test/__resource__/empty.apk"');
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledWith('apkanalyzer manifest permissions "test/__resource__/empty.apk"');
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual(["android.permission.CAMERA"]);
     });
 
@@ -351,7 +351,7 @@ describe("ManifestDefaultImpl test", () => {
           "android.permission.CAMERA\n" +
             "android.permission.NETWORK\r\n" +
             "android.permission.WAKE_LOCK\r" +
-            "com.ryunen344.fixture.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+            "com.ryunen344.fixture.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
         );
       const MockExecutor = jest.fn<Executor, []>().mockImplementation(() => ({
         execute: executeMock,
@@ -363,8 +363,8 @@ describe("ManifestDefaultImpl test", () => {
       });
       const actual = status.manifest.permissions();
 
-      expect(executeMock).toBeCalledWith('apkanalyzer manifest permissions "test/__resource__/empty.apk"');
-      expect(executeMock).toBeCalledTimes(1);
+      expect(executeMock).toHaveBeenCalledWith('apkanalyzer manifest permissions "test/__resource__/empty.apk"');
+      expect(executeMock).toHaveBeenCalledTimes(1);
       expect(actual).toStrictEqual([
         "android.permission.CAMERA",
         "android.permission.NETWORK",
@@ -385,8 +385,8 @@ describe("ManifestDefaultImpl test", () => {
     });
     const actual = status.manifest.debuggable();
 
-    expect(executeMock).toBeCalledWith('apkanalyzer manifest debuggable "test/__resource__/empty.apk"');
-    expect(executeMock).toBeCalledTimes(1);
+    expect(executeMock).toHaveBeenCalledWith('apkanalyzer manifest debuggable "test/__resource__/empty.apk"');
+    expect(executeMock).toHaveBeenCalledTimes(1);
     expect(actual).toBe(false);
   });
 });
