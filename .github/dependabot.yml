@@ -24,7 +24,7 @@ updates:
 
   # https://github.com/dependabot/dependabot-core/issues/5137
   - package-ecosystem: "github-actions"
-    directory: ".github/actions/avd"
+    directory: ".github/actions/yarn"
     schedule:
       interval: "weekly"
       day: "saturday"
