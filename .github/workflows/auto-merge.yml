@@ -1,0 +1,25 @@
+# $schema: https://json.schemastore.org/github-workflow.json
+name: auto-merge
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  enable-auto-merge:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      checks: write
+      pull-requests: write
+    if: ${{ github.actor_id == '49699333' }} # "dependabot[bot]"
+    steps:
+      - name: enable auto-merge
+        shell: bash
+        run:
+          gh pr merge --auto --squash "${{ github.event.pull_request.html_url }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
