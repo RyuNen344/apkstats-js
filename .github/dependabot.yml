@@ -9,8 +9,6 @@ updates:
       day: "saturday"
       time: "09:00"
       timezone: "Asia/Tokyo"
-    reviewers:
-      - "RyuNen344"
     commit-message:
       prefix: "github-actions: "
 
@@ -21,7 +19,16 @@ updates:
       day: "saturday"
       time: "09:00"
       timezone: "Asia/Tokyo"
-    reviewers:
-      - "RyuNen344"
     commit-message:
       prefix: "yarn: "
+
+  # https://github.com/dependabot/dependabot-core/issues/5137
+  - package-ecosystem: "github-actions"
+    directory: ".github/actions/avd"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    commit-message:
+      prefix: "github-actions: "
