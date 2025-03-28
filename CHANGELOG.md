@@ -2,6 +2,7 @@
 
 ## [0.0.6](https://github.com/RyuNen344/apkstats-js/compare/0.0.5...0.0.6) (2025-03-28)
 
+Update dependencies
 
 ### Chores
 
