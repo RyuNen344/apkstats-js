@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.6](https://github.com/RyuNen344/apkstats-js/compare/0.0.5...0.0.6) (2025-03-28)
+
+
+### Chores
+
+* **actions:** auto merge via cli ([#295](https://github.com/RyuNen344/apkstats-js/issues/295)) ([a1f2fd7](https://github.com/RyuNen344/apkstats-js/commit/a1f2fd7a5dfc7c89dbfa455f501606593c352ff6))
+* configure release-please ([#305](https://github.com/RyuNen344/apkstats-js/issues/305)) ([2fec6f4](https://github.com/RyuNen344/apkstats-js/commit/2fec6f49aebe2f5a7cc8a918593f4d96e6f725cd))
+* Update dependabot.yml ([#307](https://github.com/RyuNen344/apkstats-js/issues/307)) ([85c6ef4](https://github.com/RyuNen344/apkstats-js/commit/85c6ef4db62f17c6c3230c4ad7a5e10d1d6faf3b))
+
 ## [0.0.5](https://github.com/RyuNen344/apkstats-js/compare/0.0.4...0.0.5) (2023-12-29)
 
 
