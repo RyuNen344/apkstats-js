@@ -10,7 +10,7 @@ updates:
       time: "09:00"
       timezone: "Asia/Tokyo"
     commit-message:
-      prefix: "github-actions: "
+      prefix: "deps(github-actions): "
 
   - package-ecosystem: "npm"
     directory: "/"
@@ -20,7 +20,7 @@ updates:
       time: "09:00"
       timezone: "Asia/Tokyo"
     commit-message:
-      prefix: "yarn: "
+      prefix: "deps(yarn): "
 
   # https://github.com/dependabot/dependabot-core/issues/5137
   - package-ecosystem: "github-actions"
@@ -31,4 +31,4 @@ updates:
       time: "09:00"
       timezone: "Asia/Tokyo"
     commit-message:
-      prefix: "github-actions: "
+      prefix: "deps(github-actions): "
