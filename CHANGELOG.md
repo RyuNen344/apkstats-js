@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.0.7](https://github.com/RyuNen344/apkstats-js/compare/0.0.6...0.0.7) (2025-04-19)
+
+
+### Dependency Updates
+
+* **yarn:** bump @types/node from 18.19.84 to 18.19.86 ([#315](https://github.com/RyuNen344/apkstats-js/issues/315)) ([02b7194](https://github.com/RyuNen344/apkstats-js/commit/02b7194fe3d93aa347c231a8df50046a6ca4f84e))
+* **yarn:** bump danger from 12.3.4 to 13.0.4 ([#324](https://github.com/RyuNen344/apkstats-js/issues/324)) ([40c922c](https://github.com/RyuNen344/apkstats-js/commit/40c922cb6bedd89f352e6512425f8a90e517aaa1))
+* **yarn:** bump eslint-config-prettier from 10.1.1 to 10.1.2 ([#321](https://github.com/RyuNen344/apkstats-js/issues/321)) ([533b7e1](https://github.com/RyuNen344/apkstats-js/commit/533b7e11624c8f5b5b047be44d63e5f267c616da))
+* **yarn:** bump ts-jest from 29.3.0 to 29.3.1 ([#317](https://github.com/RyuNen344/apkstats-js/issues/317)) ([e4241df](https://github.com/RyuNen344/apkstats-js/commit/e4241dfa5d023a9e5fb940d3bd95704b0a875463))
+* **yarn:** bump ts-jest from 29.3.1 to 29.3.2 ([#325](https://github.com/RyuNen344/apkstats-js/issues/325)) ([79d1c5c](https://github.com/RyuNen344/apkstats-js/commit/79d1c5c93f5d371a6626be214079a594feb6c56a))
+* **yarn:** bump tsc-alias from 1.8.11 to 1.8.13 ([#318](https://github.com/RyuNen344/apkstats-js/issues/318)) ([1779328](https://github.com/RyuNen344/apkstats-js/commit/1779328139eb585bfd8b890e4a8a8053e53274b5))
+* **yarn:** bump tsc-alias from 1.8.13 to 1.8.15 ([#319](https://github.com/RyuNen344/apkstats-js/issues/319)) ([14d5301](https://github.com/RyuNen344/apkstats-js/commit/14d53011e8f301b59f1814bf30ba8446877c555a))
+* **yarn:** bump typedoc from 0.28.1 to 0.28.2 ([#320](https://github.com/RyuNen344/apkstats-js/issues/320)) ([3c2aee1](https://github.com/RyuNen344/apkstats-js/commit/3c2aee1480e852dd3ba0c52a86280995ea791919))
+* **yarn:** bump typescript from 5.8.2 to 5.8.3 ([#316](https://github.com/RyuNen344/apkstats-js/issues/316)) ([06b831d](https://github.com/RyuNen344/apkstats-js/commit/06b831d3c255156bd89595b3587deef77510c6ff))
+
+
+### Chores
+
+* Update .node-version ([#326](https://github.com/RyuNen344/apkstats-js/issues/326)) ([63439d4](https://github.com/RyuNen344/apkstats-js/commit/63439d4c656bab36a16d063eb1a59212c312b46c))
+* update release-please.yml ([#322](https://github.com/RyuNen344/apkstats-js/issues/322)) ([dce1403](https://github.com/RyuNen344/apkstats-js/commit/dce14039e84bda28892ba9a31d0760b7d64ef300))
+
 ## [0.0.6](https://github.com/RyuNen344/apkstats-js/compare/0.0.5...0.0.6) (2025-03-28)
 
 
