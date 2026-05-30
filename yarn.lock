@@ -1831,10 +1831,10 @@ danger-plugin-lint-report@^1.8.1:
     glob "^7.1.7"
     xml-js "^1.6.11"
 
-danger-plugin-yarn@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/danger-plugin-yarn/-/danger-plugin-yarn-1.6.0.tgz#9ca1336cfe8017867d97a7ed410ab82c8397f04d"
-  integrity sha512-W4l8ccD9uAkXU1SNhF25ezPZXB1WtHJjHT43wP0zjUq0pvBmslV+WhI+HZX2IFeY9T2VrrHiMGy6Mr2PcpdWLA==
+danger-plugin-yarn@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/danger-plugin-yarn/-/danger-plugin-yarn-1.7.0.tgz#7065a11bc99dbc7cadeae352541644f3bacea9f9"
+  integrity sha512-vRCBg0PExOGBJiU2W1P52B8pw06CGUk+sjqvJvXQOghPEFM0uH/H4DgWGe4q9Qq7TbM5dwo1XLNT7fQslOm95g==
   dependencies:
     date-fns "^1.28.5"
     lodash.flatten "^4.4.0"
