@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.8](https://github.com/RyuNen344/apkstats-js/compare/0.0.7...0.0.8) (2025-05-10)
+
+
+### Dependency Updates
+
+* **yarn:** bump @types/node from 18.19.86 to 18.19.87 ([#328](https://github.com/RyuNen344/apkstats-js/issues/328)) ([b3be9f9](https://github.com/RyuNen344/apkstats-js/commit/b3be9f936e53de580e5b344c138966b15321e08a))
+* **yarn:** bump @types/node from 18.19.87 to 18.19.100 ([#330](https://github.com/RyuNen344/apkstats-js/issues/330)) ([9f0860a](https://github.com/RyuNen344/apkstats-js/commit/9f0860afef7346916f6ff66b9278dc82699d2821))
+* **yarn:** bump eslint-config-prettier from 10.1.2 to 10.1.5 ([#329](https://github.com/RyuNen344/apkstats-js/issues/329)) ([d8f25d7](https://github.com/RyuNen344/apkstats-js/commit/d8f25d7a323178d33344e84e4170078f2c383e5c))
+* **yarn:** bump tsc-alias from 1.8.15 to 1.8.16 ([#332](https://github.com/RyuNen344/apkstats-js/issues/332)) ([5d1b721](https://github.com/RyuNen344/apkstats-js/commit/5d1b721e8ba414a1cd86d3324f7cd6cf4814a501))
+* **yarn:** bump typedoc from 0.28.2 to 0.28.3 ([#327](https://github.com/RyuNen344/apkstats-js/issues/327)) ([eedbfe2](https://github.com/RyuNen344/apkstats-js/commit/eedbfe233269b7bd9542fb023dcc6c386d6b0537))
+* **yarn:** bump typedoc from 0.28.3 to 0.28.4 ([#331](https://github.com/RyuNen344/apkstats-js/issues/331)) ([7817975](https://github.com/RyuNen344/apkstats-js/commit/7817975ffa701640d00a79e8d10f38be0b21fd72))
+
 ## [0.0.7](https://github.com/RyuNen344/apkstats-js/compare/0.0.6...0.0.7) (2025-04-19)
 
 
