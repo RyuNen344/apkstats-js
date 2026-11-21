@@ -63,7 +63,7 @@
     "tsc-alias": "^1.9.10",
     "tsconfig-paths": "^4.2.0",
     "typedoc": "^0.28.20",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   },
   "dependencies": {
     "xml-js": "^1.6.11"
